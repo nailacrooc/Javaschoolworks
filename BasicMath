@@ -1,0 +1,18 @@
+public class Main
+{
+    public static void main(String[] args) {
+        double mon, tue, wed, dailyAverage, monthlyAverage, monthlyProfit;
+        mon = 100;
+        tue = 121;
+        wed = 117;
+        
+        //formulae
+        dailyAverage = (mon + tue + wed) /3.0;
+        monthlyAverage = dailyAverage * 30;
+        monthlyProfit = monthlyAverage * 0.18;
+        
+        System.out.println("Daily Average: " + dailyAverage);
+        System.out.println("Monthly Average: " + monthlyAverage);
+        System.out.println("Profit: $" + monthlyProfit);
+    }
+}
