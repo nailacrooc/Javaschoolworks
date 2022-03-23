@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String name, chooseSex, chooseGame, msg1, msg2, msg3, msg4;
+        int age;
+        String[] sex = {"Male", "Female", "Rather not to say"};
+        String[] games = {"Shooting", "Racing","Battle Arena", "Real-Time Strategy", "Survival"};
+        
+        
+	    name = JOptionPane.showInputDialog(null, "What is your name?", "Name", JOptionPane.INFORMATION_MESSAGE);
+        age = Integer.parseInt(JOptionPane.showInputDialog(null, "How old are you?", "Age", JOptionPane.INFORMATION_MESSAGE));
+        
+        chooseSex = (String)JOptionPane.showInputDialog(null,"What is your sex?","Sex",1,null,sex,sex[0]);
+        chooseGame = (String)JOptionPane.showInputDialog(null,"Which of the game categories do you want?","Game Categories",1,null,games,games[0]);
+        
+        msg1 = "Name: " + name;
+        msg2 = "Age: " + age;
+        msg3 = "Sex: " + chooseSex;
+        msg4 = "Selected Game Category: " + chooseGame;
+        JOptionPane.showMessageDialog(null, msg1 + "\n" + msg2 + "\n" + msg3 + "\n" + msg4, "User Info", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
