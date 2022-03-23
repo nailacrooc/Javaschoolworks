@@ -1,0 +1,20 @@
+public class Main
+{
+    public static void main(String[] args) {
+        int x, y, z;
+        x = 14;
+        y = 7;
+ 
+        System.out.println("Before exchange of value: ");
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+ 
+        z = x;
+        x = y;
+        y = z;
+ 
+        System.out.println("After exchange of value: ");
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+    }
+}
