@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main {
+ 
+    public static void main(String args[]){
+        int tArea, a, b, h,choice;
+        double eArea, c, d, pi;
+        Scanner in = new Scanner(System.in);
+        pi = 3.1415926535;
+        System.out.println("Press 1 if you want to get the area of the Trapezoid.  \nPress 2 if you want to get the area of the Ellipse." );
+        choice = in.nextInt();
+        
+        if (choice == 1){
+        //Trapezoid Area
+        System.out.println("Area of Trapezoid");
+        System.out.print("Enter value of a or length: ");
+        a = in.nextInt();
+        System.out.print("Enter value of b or base: ");
+        b = in.nextInt();
+        System.out.print("Enter value of h or height: ");
+        h = in.nextInt();
+        tArea = (a+b)/2 * h;
+        System.out.print("The area of the Trapezoid is: " + tArea);
+        in.close();
+        }else if (choice == 2){
+        //Ellipse Area
+        System.out.println("Area of Ellipse");
+        System.out.print("Enter value of a: ");
+        c = in.nextDouble();
+        System.out.print("Enter value of b: ");
+        d = in.nextDouble();
+        eArea = pi * c * d;
+        System.out.print("The area of the Ellipse is: " + eArea);
+        }else{
+        System.out.print("ERROR!");    
+        }
+        
+    }
+}
