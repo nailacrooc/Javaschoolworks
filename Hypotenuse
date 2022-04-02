@@ -1,0 +1,29 @@
+import java.lang.*; // for StrictMath.hypot(a, b);
+import java.util.*;
+public class ComputeMethods
+{
+
+    public void hypotenuse(int a, int b){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter side a: ");
+        a = in.nextInt();
+        System.out.println("Enter side b: ");
+        b = in.nextInt();
+        
+        double c = StrictMath.hypot(a, b);
+        System.out.println("Hypotenuse is: " + c);
+    }
+    
+}
+
+//NEW CLASS (Which accepts variables as an argument)
+public class TestClass
+{
+    public static int a; //Make sure that the variables is here. If it is in the other class then it will throw an error.
+    public static int b;
+    
+    public static void main(String[] args) {
+        ComputeMethods com = new ComputeMethods();
+        com.hypotenuse(a, b);
+    }
+}
