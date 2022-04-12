@@ -8,8 +8,10 @@ public class Main
         boolean done;
   
       do {
+      	//Remember that the user input must be inside the loop
         System.out.println("Enter Distance: ");
         float a = sc.nextFloat();
+	
         if (a >= 10){
            b = a - 10;
            c = b * 2.5;
