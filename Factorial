@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Factorial {
+
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.print("Enter a Positive Integer: ");
+       int inputNum, result;
+       inputNum = scanner.nextInt();
+       
+       if (inputNum <= 0){
+           System.out.println("Invalid number!");
+       }else{
+           result = factorial(inputNum);
+           System.out.print(inputNum + "!" + " = " );
+           for (int i = 1; i <= inputNum; i++) {
+                if (i < inputNum){
+                    System.out.print(i + " " + "x" + " ");
+                }else{
+                    System.out.print(i);
+                }
+            }
+            System.out.println();
+            System.out.print("The factorial of " + inputNum + " is " + result);
+       }
+    }
+    
+    public static int factorial(int inputNum) {
+       int result = 1;
+       
+       for (int i = 1; i <= inputNum; i++) {
+           result = result * i;
+       }
+       return result;
+   }
+}
