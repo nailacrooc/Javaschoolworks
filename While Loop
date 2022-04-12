@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        boolean done = false;
+        int inputPin, currentPin;
+        currentPin = 1234;
+        
+        //Start of loop
+        while(!done){
+            //User input
+            System.out.print("Enter 4-DIGIT PIN: ");
+            inputPin = in.nextInt();
+            
+            if (inputPin == currentPin){
+                System.out.println("**ACCESS HAS BEEN GRANTED**");
+                done = true;
+            }else{
+                System.out.println("**ACCESS HAS BEEN DENIED**");
+            }
+        }//Loop is not done until "done" is not true    
+    }
+}
