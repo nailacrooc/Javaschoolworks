@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+
+public class SquareRoot {
+    public static void main(String args[]){
+    
+    Scanner console = new Scanner(System.in);  
+    boolean done = false;
+	int number;
+	
+	//user input
+	System.out.print("Type a non-negative integer: ");
+	
+	while(!done){
+	    number = console.nextInt();
+	    double result = Math.sqrt(number);
+	    
+	    if (number > 0){
+	        System.out.print("Thte square root of " + number " is " + result);
+	        done = true;
+	    }else{
+	        System.out.print("Invalid number, Try again: ");
+	    }
+	}
+    }
+}
+    
