@@ -1,0 +1,87 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        boolean outOfStock;
+        String items[] = {"Fruits", "Snacks", "Drinks", "Meats"};
+        
+        //quantity of items
+        int q1, q2, q3, q4;
+        q1 = 0;
+        q2 = 10;
+        q3 = 5;
+        q4 = 1;
+        
+        //prices of foods
+        int price1, price2, price3, price4;
+        price1 = 10;
+        price1 = 15;
+        price1 = 20;
+        price1 = 30;
+        
+        System.out.println("List of items: ");
+        System.out.println(items[0]) ;
+        System.out.println(items[1]);
+        System.out.println(items[2]);
+        System.out.println(items[3]);
+        
+        System.out.println(" ");
+        System.out.println("Pick an item:");
+        String itemPick = in.nextLine();
+        
+        System.out.println("How many " + itemPick + " would you like to buy?");
+        int amount = in.nextInt();
+        
+        //Checks the quantity of fruits
+        if (itemPick.equalsIgnoreCase("Fruits")){
+            outOfStock = true;
+            if (q1 > 1){
+              System.out.println("There are " + q1 + " " + items[0]);  
+              totalAmount(q1, amount);
+            }else if (outOfStock = true){
+              System.out.println("There are " + q1 + " Fruit");
+            }else{}
+            
+        //Checks the quantity of snacks    
+        }else if (itemPick.equalsIgnoreCase("Snacks")){
+            outOfStock = false;
+            if (q2 > 1){
+              System.out.println("There are " + q2 + " " + items[1]);  
+              totalAmount(q2, amount);
+            }else if (outOfStock = true){
+              System.out.println("There are " + q2 + " Snack");  
+            }else{}
+            
+        //Checks the quantity of drinks    
+        }else if (itemPick.equalsIgnoreCase("Drinks")){
+            outOfStock = true;
+            if (q3 > 1){
+              System.out.println("There are " + q3 + " " + items[2]);  
+              totalAmount(q3, amount);
+            }else if (outOfStock = true){
+              System.out.println("There are " + q3 + " Drink");
+            }else{}
+            
+        //Checks the quantity of meats    
+        }else if (itemPick.equalsIgnoreCase("Meats")){
+            outOfStock = false;
+            if (q4 > 1){
+              System.out.println("There are " + q4 + " " + items[3]);  
+              totalAmount(q4, amount);
+            }else if (outOfStock = true){
+              System.out.println("There are " + q4 + " Meat");
+            }else{}
+        }else{
+              System.out.println("Error");
+        }
+        
+    }
+    
+        public static void totalAmount(int itemPick, int amount){
+            int total = itemPick * amount;
+            System.out.println("Total amount: " + total);
+        }
+    
+    
+}
