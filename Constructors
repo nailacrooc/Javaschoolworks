@@ -1,0 +1,19 @@
+public class PrisonTest
+{
+    public static void main(String[] args) {
+        Prisoner bubba = new Prisoner("tae", 2);
+    }
+}
+
+//new class
+public class Prisoner{
+        public String name;
+        public int sentence;
+        
+        public Prisoner (String n,  int s){
+            name = n;
+            sentence = s;
+            System.out.println(name);
+            System.out.println(sentence);
+        }
+}
