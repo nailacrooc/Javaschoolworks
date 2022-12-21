@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        Computation comp = new Computation();
+        
+        double height, weight, age, formula;
+
+        System.out.println("Enter your height (m): ");
+        height = in.nextDouble();
+        
+        System.out.println("Enter your weight (kg): ");
+        weight = in.nextDouble();
+        
+        System.out.println("Enter your age: ");
+        age = in.nextDouble();
+        
+        double bmi = comp.compBMI(height, weight);
+        comp.fatOrNot(bmi);
+    }
+}
+
+class Computation{
+    public double compBMI (double height, double weight){
+        double bmi = weight / (height * height);
+        System.out.println("Result: " + bmi);
+        return bmi;
+    }
+    
+    public void fatOrNot (double bmi){
+        if (bmi >= 25.0){
+            System.out.println("HAHA botchog");
+        }else if (bmi >= 18.5 && bmi <= 24.9){
+            System.out.println("goods");
+        }else if (bmi <= 18.4){
+            System.out.println("HAHA Tingting");
+        }
+    }
+}
